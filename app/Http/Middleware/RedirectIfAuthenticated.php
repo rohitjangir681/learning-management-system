@@ -65,8 +65,6 @@ class RedirectIfAuthenticated
         }
        }
 
-       dd($routes);
-
         return '/';
 
 
