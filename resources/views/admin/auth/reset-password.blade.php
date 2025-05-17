@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <form method="POST" action="{{ route('admin.password.store') }}">
         @csrf
 
@@ -36,4 +36,62 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+</x-guest-layout> --}}
+
+
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+      <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@tabler/core@1.2.0/dist/css/tabler.min.css" />
+<script
+  src="https://cdn.jsdelivr.net/npm/@tabler/core@1.2.0/dist/js/tabler.min.js">
+</script>
+  </head>
+  <body class="">
+    <div class="page">
+      <div class="page-single">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-login mx-auto mt-6">
+              <div class="text-center mb-6">
+                <x-auth-session-status class="mb-4" :status="session('status')" />
+              </div>
+              <form class="card" action="{{ route('admin.password.store') }}" method="POST">
+                @csrf
+                <input type="hidden" name="token" value="{{ $request->route('token') }}">
+                <div class="card-body p-6">
+                  <div class="form-group">
+                    <label class="form-label">Email address</label>
+                    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                     <x-input-error :messages="$errors->get('email')" style="color: red" class="mt-2" />
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <label class="form-label">
+                      Password
+                    </label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <x-input-error :messages="$errors->get('password')" style="color: red" class="mt-2" />
+                  </div>
+                  <br>
+                      <div class="form-group">
+                    <label class="form-label">
+                     Confirm Password
+                    </label>
+                    <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="Password" autocomplete="new-password">
+                    <x-input-error :messages="$errors->get('password_confirmation')" style="color: red" class="mt-2" />
+                  </div>
+                  <br>
+                  <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-block">Reset Password</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
