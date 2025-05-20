@@ -308,7 +308,7 @@
                <td class="wrapper">
                 <p>Hi there</p>
                 <p>Your Instructor request has been aproved. Now you can publish your courses.</p>
-                <p>Please visit your dashboard here: <a href="{{ url('/instructor/dashboard') }}">Instructor
+                <p>Please visit your dashboard here: <a href="http://127.0.0.1:8000/instructor/dashboard">Instructor
                         Dashboard</a></p>
                 <p>Good luck!</p>
             </td>

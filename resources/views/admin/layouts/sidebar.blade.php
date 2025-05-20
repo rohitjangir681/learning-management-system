@@ -40,17 +40,21 @@
                          <path d="M12 12l-8 -4.5" />
                          <path d="M16 5.25l-8 4.5" />
                      </svg></span>
-                 <span class="nav-link-title"> Interface </span>
+                 <span class="nav-link-title"> Course Management </span>
              </a>
              <div class="dropdown-menu">
                  <div class="dropdown-menu-columns">
                      <div class="dropdown-menu-column">
-                         <a class="dropdown-item" href="./accordion.html">
-                             Accordion
+                         <a class="dropdown-item" href="{{ route('admin.course-language.index') }}">
+                             Course Language
+                         </a>
+                         <a class="dropdown-item" href="{{ route('admin.course-levels.index') }}">
+                             Course Levels
                          </a>
                      </div>
                  </div>
              </div>
+
          </li>
      </ul>
      <!-- END NAVBAR MENU -->

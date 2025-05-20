@@ -24,6 +24,15 @@ class User extends Authenticatable
         'role',
         'approve_status',
         'document',
+        'image',
+        'bio',
+        'headline',
+        'facebook',
+        'x',
+        'linkedin',
+        'website',
+        'github',
+        'gender'
     ];
 
     /**
