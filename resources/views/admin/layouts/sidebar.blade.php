@@ -51,6 +51,9 @@
                          <a class="dropdown-item" href="{{ route('admin.course-levels.index') }}">
                              Course Levels
                          </a>
+                         <a class="dropdown-item" href="{{ route('admin.course-categories.index') }}">
+                             Course Categories
+                         </a>
                      </div>
                  </div>
              </div>
